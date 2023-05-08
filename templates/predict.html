@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Video</title>
+</head>
+<body>
+	<h1>Upload a video of a dog</h1>
+	<form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+		<input type="file" name="file" accept="video/*">
+		<input type="submit" value="Upload">
+	</form>
+
+	{% if result %}
+		<h2>Prediction Result:</h2>
+		<p>{{ result }}</p>
+	{% endif %}
+
+</body>
+</html>

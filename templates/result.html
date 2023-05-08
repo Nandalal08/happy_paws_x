@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<header>
+    <nav class="navbar" id="nav">
+    <a class="item siteName" href="{{ url_for('index') }}">HappyPaws</a>
+    <a class="item" href="{{ url_for('about') }}">About</a>
+    <a class="item" href="{{ url_for('animal_list') }}">Find a Dog</a>
+    <a class="item" href="{{ url_for('policy') }}">Policy</a>
+    <a class="item" href="{{ url_for('success_stories') }}">Stories</a>
+    <a class="item" href="{{ url_for('resources') }}">Resources</a>
+    <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>
+</header>
+
+<section class="container cover salmon">
+   <h1>The final result is: {{ result }}</h1>
+	<h2>Video Frame:</h2>
+	{% for frame in processed_frames_base64 %}
+    <img src="data:image/jpeg;base64,{{ frame }}" alt="Processed Frame">
+{% endfor %}
+
+
+</section>
+ 
+		        
+<a href="{{ url_for('predict') }} ">Upload video</a>
+</body>
+</html>

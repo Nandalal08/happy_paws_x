@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HappyPaws</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar" id="nav">
+    <a class="item siteName" href="{{ url_for('index') }}">HappyPaws</a>
+    <a class="item" href="{{ url_for('about') }}">About</a>
+    <a class="item" href="{{ url_for('animal_list') }}">Find a Dog</a>
+    <a class="item" href="{{ url_for('policy') }}">Policy</a>
+    <a class="item" href="{{ url_for('success_stories') }}">Stories</a>
+    <a class="item" href="{{ url_for('resources') }}">Resources</a>
+    <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>
+</header>
+
+<section class="container cover salmon">
+    <div class="row">
+        <div class="column-two">
+            <div class="wrapper">
+                <h1 class="cover-heading">Dogs Find Their People</h1>
+                <p class="description">Thousands of adoptable dogs are looking for people. Adopting, fostering and sponsoring can save lives.</p>
+                <br><a href="{{ url_for('animal_list') }}" class="button left">Adopt Now</a>
+            </div>
+        </div>
+        <div class="column-two">
+            <img src="{{ url_for('static', filename='assets/img/puppy_fixed.gif') }}" alt="Dog animation" />
+
+        </div>
+    </div>
+</section>
+
+<section class="banner first"></section>
+
+<section class="container white">
+        <div class="wrapper">
+            <h2>HappyPaws</h2>
+            <p class="description">We rescue chained, penned, abused, and neglected dogs</p>
+            <br><a href="{{ url_for('about') }}" class="button">More About Us</a>
+        </div>
+
+</section>
+
+<section class="banner second"></section>
+
+<section class="container white" id="whatToDo">
+    <div class="row">
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/policy.png') }}" alt="Policy icon" />
+                <h3>How to Adopt</h3>
+                <p>Learn about our adoption policies!</p>
+                <a href="{{ url_for('policy') }} "class="button-small">See Policy</a>
+            </div>
+        </div>
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/find.png') }}" alt="Finding icon" />
+                <h3>Finding a Dog</h3>
+                <p>See dogs available for adoption near you!</p>
+				<a href="{{ url_for('animal_list') }} " class="button-small">Meet Dogs in Need</a>
+            </div>
+        </div>
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/story.png') }}" alt="Story icon" />
+                <h3>Successful Stories</h3>
+                <p>Check out some of our success stories!</p>
+		        <a href="{{ url_for('success_stories') }}" class="button-small">See Stories</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+
+  <p> ©Fur&Friendz All rights reserved </p>
+
+    <div class="shortcut">
+        <p><a class="item" href="{{ url_for('index') }} ">Home</a></p>
+        <p><a class="item" href="{{ url_for('about') }}" >About</a></p>
+        <p><a class="item" href="{{ url_for('policy') }}" >Policy</a></p>
+        <p><a class="item" href="{{ url_for('success_stories') }} ">Stories</a></p>
+        <p><a class="item" href="{{ url_for('animal_list') }}" >List of Dogs</a></p>
+        <p><a class="item" href="{{ url_for('adopt') }} ">Adoption Form</a></p>
+		<p><a class="item" href="{{ url_for('resources') }}" >Resources</a></p>
+
+    </div>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.className === "navbar") {
+        x.className += " responsive";
+        } else {
+        x.className = "navbar";
+        }
+    }
+</script>
+
+</body>

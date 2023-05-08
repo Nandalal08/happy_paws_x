@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HappyPaws</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar" id="nav">
+    <a class="item siteName" href="{{ url_for('index') }}">HappyPaws</a>
+    <a class="item" href="{{ url_for('about') }}">About</a>
+    <a class="item" href="{{ url_for('animal_list') }}">Find a Dog</a>
+    <a class="item" href="{{ url_for('policy') }}">Policy</a>
+    <a class="item" href="{{ url_for('success_stories') }}">Stories</a>
+    <a class="item" href="{{ url_for('resources') }}">Resources</a>
+    <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>
+</header>
+
+<section class="container brown" id="about">
+    <div class="row">
+        <div class="column-two">
+            <img src="{{ url_for('static', filename='assets/img/dog-adrienghenassia.gif') }}" alt="Dog animation" />
+
+        </div>
+        <div class="column-two">
+            <div class="wrapper">
+                <h1>HappyPaws</h1>
+                <p class="description">We are a nonprofit organization advocating for a voice for chained, penned, abused and neglected dogs.</p>
+                <p>We rescue dogs of all breeds, ages, and conditions. We provide the love, medical care, socialization, and training they need to be happy, healthy and loving companions.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container white" id="mission">
+    <h2>Our Mission</h2>
+    <div class="row">
+        <div class="column-three">
+            <div class="wrapper-icon">
+                
+            
+            <img src="{{ url_for('static', filename='assets/icon/paw1.png') }}" alt="Policy icon"  />
+            
+                <h3>Public Awareness</h3>
+                <p>Increase public awareness of the availability of high-quality adoptable pets</p>
+            </div>
+        </div>
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/paw2.png') }}" alt="Finding icon" />
+                
+    
+                <h3>Effective Adoption</h3>
+                <p>Increase the overall effectiveness of pet adoption programs </p>
+            </div>
+        </div>
+
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/paw3.png') }}" alt="story icon" />
+
+                
+                <h3>Happy Family</h3>
+                <p>Elevate the status of pets to that of family members</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner third"></section>
+
+<!-- change the names for the team -->
+
+<section class="container white" id="team">
+    <h2>Our Team</h2>
+    <div class="row">
+        <div class="column-four">
+            <div class="wrapper">
+                <img class="image-circle" src="{{ url_for('static', filename='assets/img/mari.jpg') }}"  />
+                <p>Maria</p>
+            </div>
+        </div>
+        <div class="column-four">
+            <div class="wrapper">
+                <img class="image-circle" src="{{ url_for('static', filename='assets/img/n.jpeg') }}"  />
+                <p>Nandalal</p>
+            </div>
+        </div>
+        <div class="column-four">
+            <div class="wrapper">
+                <img class="image-circle" src="{{ url_for('static', filename='assets/img/jo.jpg') }}"  />
+                <p>Jyotsna</p>
+            </div>
+        </div>
+        <div class="column-four">
+            <div class="wrapper">
+                <img class="image-circle" src="{{ url_for('static', filename='assets/img/riya.jpg') }}" />
+                <p>Riya</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <p> ©Fur&Friendz All rights reserved </p>
+    
+ <div class="shortcut">
+        <p><a class="item" href="{{ url_for('index') }}" >Home</a></p>
+        <p><a class="item" href="{{ url_for('about') }}" >About</a></p>
+        <p><a class="item" href="{{ url_for('policy') }}" >Policy</a></p>
+        <p><a class="item" href="{{ url_for('success_stories') }}" >Stories</a></p>
+        <p><a class="item" href="{{ url_for('animal_list') }}" >List of Dogs</a></p>
+        <p><a class="item" href="{{ url_for('adopt') }}">Adoption Form</a></p>
+		<p><a class="item" href="{{ url_for('resources') }}" >Resources</a></p>
+
+    </div>
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.className === "navbar") {
+        x.className += " responsive";
+        } else {
+        x.className = "navbar";
+        }
+    }
+</script>
+
+</body>
+</html>

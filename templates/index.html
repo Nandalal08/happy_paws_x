@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HappyPaws</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.flip.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,500i,900i|VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar" id="nav">
+        <a class="item siteName" href="{{ url_for('index') }}"> HappyPaws </a>
+        
+        <!-- <a class="item icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a> -->
+    </nav>
+</header>
+
+<section class="container cover salmon1">
+    <div class="row">
+        <div class="column-two">
+            <div class="wrapper">
+                <h1 class="cover-heading">Furry, friendly, and fabulous</h1>
+			<p class="description">Keep track of street dogs with our machine learning-powered webapp.</p>
+                <!-- <p class="description"</p> -->
+                <br><a href="#" class="button left">Get Started</a>
+            </div>
+        </div>
+        <div class="column-two">
+            <img src="{{ url_for('static', filename='assets/img/Facebook.gif') }}" alt="Dog animation">
+            
+
+        </div>
+    </div>
+</section>
+
+<section class="banner first"></section>
+
+<section class="container white">
+        <div class="wrapper">
+            <h2>HappyPaws</h2>
+            <p class="description">We are a team of passionate dog lovers dedicated to improving the lives of street dogs through the power of technology. Our machine learning-powered webapp helps to identify street dogs, verify vaccinations, and predict Rabies outbreaks. We also offer a selection of street dogs available for adoption through our platform.
+
+</p>
+            <!-- <p class="description">We rescue chained, penned, abused, and neglected dogs</p> -->
+            <br><a href="{{ url_for('about') }}" class="button">More About Us</a>
+        </div>
+
+</section>
+
+<section class="banner second"></section>
+
+<section class="container white" id="whatToDo">
+    <div class="row">
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/adopt.png') }}" alt="Policy icon">
+
+                
+                <h3>Adopt a paw</h3>
+                <p>Learn about our adoption policies!</p>
+                <a href="{{ url_for('adopt') }}" class="button-small">check</a>
+
+                
+            </div>
+        </div>
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/vaccine.png') }}" alt="find icon">
+
+                
+                <h3>Verification</h3>
+                <p>Paw status</p>
+				<a href="" class="button-small">coming soon</a>
+            </div>
+        </div>
+        <div class="column-three">
+            <div class="wrapper-icon">
+                <img src="{{ url_for('static', filename='assets/icon/microscope.png') }}" alt="story icon">
+
+                
+                <h3>Rabies Prediction</h3>
+                <p>Predict rabies in paw</p>
+		        
+                <a href="{{ url_for('predict') }}" class="button-small">check</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <!-- <p>@Fur&Friendz All rights reserved</p> -->
+    
+  <p> ©Fur&Friendz All rights reserved </p>
+   
+</footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("nav");
+        if (x.className === "navbar") {
+        x.className += " responsive";
+        } else {
+        x.className = "navbar";
+        }
+    }
+</script>
+
+</body>
