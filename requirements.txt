@@ -5,3 +5,6 @@ scikit-learn
 tensorflow
 opencv-python
 ipywidgets
+git commit -m "first commit"
+git remote add origin https://github.com/loretoparisi/happy_paw.git
+git push -u origin master
